@@ -5,8 +5,28 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Panilla_Usuario"
         mc:Ignorable="d"
-        Title="Panilla Usuario" Height="450" Width="800" WindowStartupLocation="CenterScreen" AllowsTransparency="True">
+        Title="Panilla Usuario" Height="500" Width="800" WindowStartupLocation="CenterScreen" AllowsTransparency="True">
     <Grid>
+        <!--#region Definiendo Filas y Columnas-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="300"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
         
+        <!--#endregion-->
+
+        <Border Grid.Row="0" Background="Aquamarine">
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" FontSize="40" Margin="15">Usuario:</TextBlock>
+
+            <StackPanel Orientation="Horizontal">
+                
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontSize="30">Nombre:</TextBlock>
+                        <TextBox FontSize="25" Name="txtNombre" Width="250" Height="40"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>
