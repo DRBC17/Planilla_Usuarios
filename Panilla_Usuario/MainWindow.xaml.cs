@@ -20,9 +20,16 @@ namespace Panilla_Usuario
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static class UIGlobal
+        {
+            public static MainWindow ventana { get; set; }
+        }
+        public Empleado losEmpleados { get; set; }
         public MainWindow()
         {
             InitializeComponent();
+            losEmpleados = new Empleado {PagoPoHora="0",PagoPoHoraExtra="0",HorasExtraTrabajadas="0",HorasTrabajadas="0",SueldoNeto="0",SueldoDeducciones="0",SueldoTotal="0",SueldoHorasExtra="0"};
+            this.DataContext = losEmpleados;
         }
     }
 }
