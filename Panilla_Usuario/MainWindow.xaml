@@ -48,9 +48,9 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="0 15 0 0">
                     <TextBlock FontSize="30" Margin="10 0 10 0">Horas Extras</TextBlock>
-                    <TextBox FontSize="25" Name="txtHorasExtra" Width="100" Height="40" Text="{Binding Path=PagoPorHoraExtra,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox FontSize="25" Name="txtHorasExtra" Width="100" Height="40" Text="{Binding Path=HorasExtrasTrabajadas,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
                     <TextBlock FontSize="30" Margin="130 0 10 0">Pago por Hora Extras</TextBlock>
-                    <TextBox FontSize="25" Name="txtHorasExtraT" Width="100" Height="40" Text="{Binding Path=PagoPorHoraExtraTrabajada,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBox FontSize="25" Name="txtHorasExtraT" Width="100" Height="40" Text="{Binding Path=PagoPoHoraExtra,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
             </StackPanel>
         </Border>
