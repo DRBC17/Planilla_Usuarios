@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Panilla_Usuario"
         mc:Ignorable="d"
-        Title="Panilla Usuario" Height="500" Width="800" WindowStartupLocation="CenterScreen" AllowsTransparency="True">
+        Title="Panilla Usuario" Height="500" Width="900" WindowStartupLocation="CenterScreen">
     <Grid>
         <!--#region Definiendo Filas y Columnas-->
         <Grid.RowDefinitions>
@@ -16,17 +16,42 @@
         <!--#endregion-->
 
         <Border Grid.Row="0" Background="Aquamarine">
-            <StackPanel>
+            <StackPanel Orientation="Vertical">
                 <TextBlock HorizontalAlignment="Center" FontSize="40" Margin="15">Usuario:</TextBlock>
 
             <StackPanel Orientation="Horizontal">
                 
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock FontSize="30">Nombre:</TextBlock>
-                        <TextBox FontSize="25" Name="txtNombre" Width="250" Height="40"/>
+                        <TextBlock FontSize="30" Margin="10 0 10 0">Nombre:</TextBlock>
+                        <TextBox FontSize="25" Name="txtNombre" Width="250" Height="40" Text="{Binding Path=Nombre,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
                     </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontSize="30" Margin="30 0 10 0">Identidad:</TextBlock>
+                        <TextBox FontSize="25" Name="txtIdentidad" Width="250" Height="40" Text="{Binding Path=Identidad,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
+                
+                </StackPanel>
+                
+                <StackPanel Orientation="Horizontal" Margin="0 15 0 0">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontSize="30" Margin="10 0 10 0">Horas Trabajadas</TextBlock>
+                        <TextBox FontSize="25" Name="txt" Width="100" Height="40" Text="{Binding Path=HorasTrabajadas,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock FontSize="30" Margin="70 0 10 0">Pago por Hora</TextBlock>
+                        <TextBox FontSize="25" Name="txtIHorasT" Width="100" Height="40" Text="{Binding Path=PagoPorHora,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                    </StackPanel>
+                   
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 15 0 0">
+                    <TextBlock FontSize="30" Margin="10 0 10 0">Horas Extras</TextBlock>
+                    <TextBox FontSize="25" Name="txtHorasExtra" Width="100" Height="40" Text="{Binding Path=PagoPorHoraExtra,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock FontSize="30" Margin="130 0 10 0">Pago por Hora Extras</TextBlock>
+                    <TextBox FontSize="25" Name="txtHorasExtraT" Width="100" Height="40" Text="{Binding Path=PagoPorHoraExtraTrabajada,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
                 </StackPanel>
             </StackPanel>
         </Border>
+        
+        
     </Grid>
 </Window>
