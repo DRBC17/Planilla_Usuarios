@@ -11,10 +11,13 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="300"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
         
         <!--#endregion-->
 
+        
+        <!--#region Bloque de Usuario-->
         <Border Grid.Row="0" Background="Aquamarine">
             <StackPanel Orientation="Vertical">
                 <TextBlock HorizontalAlignment="Center" FontSize="40" Margin="15">Usuario:</TextBlock>
@@ -51,7 +54,25 @@
                 </StackPanel>
             </StackPanel>
         </Border>
-        
-        
+        <!--#endregion-->
+
+        <Border Grid.RowSpan="3" Background="Bisque" Margin="0 300 0 0">
+            <StackPanel Orientation="Vertical" Margin="20"> <!--Stack Principal-->
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock FontSize="25">El sueldo sin deducciones:</TextBlock>
+                    <TextBox Name="txtSueldoBruto" Width="100" Height="40" Margin="10 0 0 0" Text="{Binding Path=SueldoNeto,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock FontSize="25" Margin="10 0 0 0">El sueldo por Horas Extra:</TextBlock>
+                    <TextBox Name="txtSueldoHorasExtra" Width="100" Height="40" Margin="10 0 0 0" Text="{Binding Path=SueldoHorasExtra,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0 20 0 0">
+                    <TextBlock FontSize="25">Deducciones:</TextBlock>
+                    <TextBox Name="txtSueldoDeducciones" Width="100" Height="40" Margin="10 0 0 0" Text="{Binding Path=SueldoDeducciones,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+                    <TextBlock FontSize="25" Margin="150 0 0 0">El sueldo Total:</TextBlock>
+                    <TextBox Name="txtSueldoTotal" Width="100" Height="40" Margin="10 0 0 0" Text="{Binding Path=SueldoTotal,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+                </StackPanel>
+            </StackPanel>
+        </Border>
     </Grid>
 </Window>
