@@ -50,8 +50,8 @@ namespace Panilla_Usuario
 
         private void OnPropertyChanged(string property)
         {
-            //if(PropertyChanged!=null)
-                
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(property));
         }
     }
 }
